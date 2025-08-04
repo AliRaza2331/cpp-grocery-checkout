@@ -1,0 +1,34 @@
+Grocery Checkout System – Project Overview
+This project implements a console‑based checkout system for a small grocery store using C++. 
+It demonstrates how to combine basic C++ constructs—structures, vectors, loops, conditionals 
+and formatted I/O—to solve a practical problem. Users can enter the name, price and quantity
+of each item they want to purchase; the program stores these in a dynamic list,
+automatically increments quantities if the same item is entered twice, and maintains a
+running subtotal. When the user types done the checkout process begins: if the subtotal 
+exceeds $100, a 10 % discount is applied, then a 5 % sales tax is computed on the
+discounted total. The program outputs a clear receipt showing each item’s total cost,
+the subtotal before and after discount, the tax amount and the final total, formatted to 
+two decimal places.
+
+Key features
+Add items interactively: Prompt for item name, price and quantity until the user enters “done.”
+
+Avoid duplicates: If an item already exists in the list, only its quantity increases.
+
+Calculate discounts automatically: Apply a 10 % discount when the subtotal exceeds $100.
+
+Compute sales tax: Add a 5 % tax after any discount.
+
+Generate a receipt: List each item with its total cost and print subtotal, discounted total,
+tax and final total neatly formatted.
+
+How it works
+The program defines a simple struct Item with name, price and quantity fields and stores 
+all items in a std::vector<Item>. It reads user input in a loop, checking for the 
+sentinel value done to terminate. After input ends, it calculates the subtotal as 
+price × quantity for each item, applies the discount if the subtotal exceeds $100,
+computes tax on the discounted total and prints the final receipt.
+The use of std::fixed and std::setprecision ensures that monetary values always display 
+two decimal places.
+
+
